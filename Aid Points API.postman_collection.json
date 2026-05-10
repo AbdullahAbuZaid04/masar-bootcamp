@@ -1,0 +1,263 @@
+{
+  "info": {
+    "_postman_id": "66d11e24-1fe4-4dad-b146-ac9dd53d1073",
+    "name": "Aid Points API",
+    "description": "API for managing humanitarian aid points",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24758782"
+  },
+  "item": [
+    {
+      "name": "Get All Organizations",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/api/organizations",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "organizations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Points",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/api/points",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "points"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Points (by name or area)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/api/points?search=Gaza",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "points"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "Gaza",
+              "description": "Search in name or area"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Filter by Status",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/api/points?status=Available",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "points"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "Available",
+              "description": "Available | Limited | Unavailable"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Filter by Type",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/api/points?type=Food",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "points"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "Food"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Filter by Area",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/api/points?area=Rafah",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "points"
+          ],
+          "query": [
+            {
+              "key": "area",
+              "value": "Rafah"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Filter Combined (type + status)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/api/points?type=Water&status=Available",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "points"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "Water"
+            },
+            {
+              "key": "status",
+              "value": "Available"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Point",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Food Center\",\n  \"type\": \"Food\",\n  \"area\": \"Rafah\",\n  \"organization_id\": 1,\n  \"address\": \"Main Street, Rafah\",\n  \"status\": \"Available\"\n}"
+        },
+        "url": {
+          "raw": "{{url}}/api/points",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "points"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Point",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/api/points/1",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "api",
+            "points",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
