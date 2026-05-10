@@ -27,20 +27,21 @@ export default function FormSection() {
 
       <form action={formAction} className="space-y-5">
         <div>
-          <label className="block text-sm font-bold text-[#003357] mb-2">Point Name</label>
+          <label htmlFor="point-name" className="block text-sm font-bold text-[#003357] mb-2">Point Name</label>
           <input
+            id="point-name"
             type="text"
             name="name"
             required
             placeholder="e.g., Central Station A"
-            className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all placeholder:text-gray-300"
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all placeholder:text-gray-500"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-bold text-[#003357] mb-2">Type</label>
+          <label htmlFor="point-type" className="block text-sm font-bold text-[#003357] mb-2">Type</label>
           <div className="relative">
-            <select name="type" required className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] appearance-none focus:outline-none cursor-pointer text-gray-700">
+            <select id="point-type" name="type" required className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500/20 cursor-pointer text-gray-700">
               <option value="Food">Food</option>
               <option value="Medicine">Medicine</option>
               <option value="Money">Money</option>
@@ -51,10 +52,10 @@ export default function FormSection() {
         </div>
 
         <div>
-          <label className="block text-sm font-bold text-[#003357] mb-2">Area</label>
+          <label htmlFor="point-area" className="block text-sm font-bold text-[#003357] mb-2">Area</label>
           <div className="relative">
-            <MapPin className="absolute left-4 top-3.5 text-gray-300 pointer-events-none" size={18} />
-            <select name="area" required className="w-full pl-11 pr-10 py-3 rounded-lg border border-gray-200 bg-[#f8faff] appearance-none focus:outline-none cursor-pointer text-gray-700">
+            <MapPin className="absolute left-4 top-3.5 text-gray-500 pointer-events-none" size={18} />
+            <select id="point-area" name="area" required className="w-full pl-11 pr-10 py-3 rounded-lg border border-gray-200 bg-[#f8faff] appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500/20 cursor-pointer text-gray-700">
               <option value="Gaza">Gaza</option>
               <option value="Khan-Younis">Khan-Younis</option>
               <option value="Rafah">Rafah</option>
@@ -64,9 +65,9 @@ export default function FormSection() {
         </div>
 
         <div>
-          <label className="block text-sm font-bold text-[#003357] mb-2">Organization</label>
+          <label htmlFor="point-organization" className="block text-sm font-bold text-[#003357] mb-2">Organization</label>
           <div className="relative">
-            <select name="organization_id" required className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] appearance-none focus:outline-none cursor-pointer text-gray-700">
+            <select id="point-organization" name="organization_id" required className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500/20 cursor-pointer text-gray-700">
               <option value="1">UNRWA</option>
               <option value="2">WFP</option>
               <option value="3">UNICEF</option>
@@ -77,23 +78,24 @@ export default function FormSection() {
         </div>
 
         <div>
-          <label className="block text-sm font-bold text-[#003357] mb-2">Address</label>
+          <label htmlFor="point-address" className="block text-sm font-bold text-[#003357] mb-2">Address</label>
           <div className="relative">
-            <HomeIcon className="absolute left-4 top-3.5 text-gray-300 pointer-events-none" size={18} />
+            <HomeIcon className="absolute left-4 top-3.5 text-gray-500 pointer-events-none" size={18} />
             <input
+              id="point-address"
               type="text"
               name="address"
               required
               placeholder="e.g., Main Street, Rafah"
-              className="w-full pl-11 pr-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all placeholder:text-gray-300"
+              className="w-full pl-11 pr-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all placeholder:text-gray-500"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-bold text-[#003357] mb-2">Status</label>
+          <label htmlFor="point-status" className="block text-sm font-bold text-[#003357] mb-2">Status</label>
           <div className="relative">
-            <select name="status" required className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] appearance-none focus:outline-none cursor-pointer text-gray-700">
+            <select id="point-status" name="status" required className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-[#f8faff] appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500/20 cursor-pointer text-gray-700">
               <option value="Available">Available</option>
               <option value="Unavailable">Unavailable</option>
             </select>

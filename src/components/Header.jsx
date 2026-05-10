@@ -18,10 +18,10 @@ export default function Header() {
       </div>
 
       <div className="flex items-center gap-5 text-gray-500">
-        <button className="hover:text-gray-800">
+        <button className="hover:text-gray-800 focus:outline-none rounded-md p-1" aria-label="Notifications">
           <Bell size={20} />
         </button>
-        <button className="hover:text-gray-800">
+        <button className="hover:text-gray-800 focus:outline-none rounded-md p-1" aria-label="Settings">
           <Settings size={20} />
         </button>
         <div className="ml-2 h-9 w-9 overflow-hidden rounded-full">

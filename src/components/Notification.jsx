@@ -20,7 +20,7 @@ export default function Notification({ state }) {
   if (!isVisible || !state?.message) return null;
 
   return (
-    <div className="transition-all duration-500 animate-in fade-in slide-in-from-top-2">
+    <div role="status" aria-live="polite" className="transition-all duration-500 animate-in fade-in slide-in-from-top-2">
       {state.success === true ? (
         <div className="mb-4 p-3 bg-green-50 border border-green-200 text-green-700 rounded-lg text-center text-sm shadow-sm">
           {state.message}
